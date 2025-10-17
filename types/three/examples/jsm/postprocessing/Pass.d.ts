@@ -21,11 +21,11 @@ export class Pass {
     dispose(): void;
 }
 
-export class FullScreenQuad {
-    constructor(material?: Material);
+export class FullScreenQuad<TMaterial extends Material = Material> {
+    constructor(material?: TMaterial);
 
     render(renderer: WebGLRenderer): void;
     dispose(): void;
 
-    material: Material;
+    material: TMaterial;
 }
